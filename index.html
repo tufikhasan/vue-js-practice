@@ -9,14 +9,18 @@
 </head>
 
 <body>
-    <div id="app">{{message}}</div>
+    <div id="app">
+        <button @click="count++">
+            Count is: {{ count }}
+        </button>
+    </div>
+
     <script>
         const { createApp, ref } = Vue;
         createApp({
             setup() {
-                const message = ref('Hello Vue');
                 return {
-                    message
+                    count: ref(0)
                 }
             }
         }).mount('#app');
