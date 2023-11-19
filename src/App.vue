@@ -1,57 +1,18 @@
-<!-------------------------------
---- Vue 2 Options API -----
--------------------------------->
-<!-- <script>
-export default {
-  data() {
-    const message = "Welcome vue js project";
-    return {
-      message,
-    };
-  },
-  methods: {
-    getData() {
-      return "Hello";
-    },
-  },
-};
-</script> -->
-
-<!-------------------------------
---- Vue 2 Composition API -----
--------------------------------->
-<!-- <script>
-export default {
-  setup() {
-    const message = "Welcome vue js project";
-    function getData() {
-      return "Hello";
-    }
-    return {
-      message,
-      getData,
-    };
-  },
-};
-</script> -->
-
-<!-------------------------------
---- Vue 3 Composition API -----
--------------------------------->
 <script setup>
-const message = "Welcome vue js project";
-function getData() {
-  return "Hello";
-}
+const name = "Towfik hasan";
+const rawHtml = "<h1>I am a <em>laravel</em> developer</h1>";
 </script>
 
 <template>
-  <h1>{{ message }}</h1>
-  <h1>{{ getData() }}</h1>
+  <!-- text interpolation -->
+  <h3>{{ name }}</h3>
+  <div>{{ rawHtml }}</div>
+  <!-- output real HTML -->
+  <div v-html="rawHtml"></div>
 </template>
 
 <style scoped>
-h1 {
-  color: red;
+h3 {
+  color: coral;
 }
 </style>
