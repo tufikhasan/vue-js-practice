@@ -1,28 +1,21 @@
 <script setup>
-const day = "fri";
-const weather = "s";
+import { ref } from "vue";
+const number = ref();
 </script>
 <template>
-  <!-- ternary operator -->
-  <!-- <h1>{{ day == "sun" ? "Weekend" : "No weekend" }}</h1>
-  <br /> -->
-
-  <!--multiple condition -  ternary operator -->
-  <!-- <h1>
-    {{ day == "sun" ? "Weekend" : "No weekend" }}
-    {{ weather == "s" ? "Today is a sunny day." : "Winter" }}
+  <h1 v-show="number">
+    {{ number }} is {{ number % 2 == 0 ? "Even" : "Odd" }} number
   </h1>
-  <br /> -->
-
-  <!--multiple condition -  ternary operator -->
-  <h1>
-    {{ day == "sun" ? "Weekend" : day == "fri" ? "Zummah" : "work day" }}
-  </h1>
-  <br />
+  <input
+    type="number"
+    v-model="number"
+    placeholder="Input a number to check Even or Odd"
+  />
 </template>
 
 <style scoped>
-h1 {
-  color: red;
+input {
+  width: 300px;
+  padding: 1rem;
 }
 </style>
