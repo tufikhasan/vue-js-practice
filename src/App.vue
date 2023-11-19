@@ -1,22 +1,15 @@
 <script setup>
-import { ref } from "vue";
-const number = ref();
+const result = true;
+const day = "friday";
 </script>
 <template>
-  <h1 v-show="number">
-    {{ number }} is {{ number < 0 ? "negative" : "" }}
-    {{ number % 2 == 0 ? "Even" : "Odd" }} number
-  </h1>
-  <input
-    type="number"
-    v-model="number"
-    placeholder="Input a number to check Even or Odd"
-  />
+  <h1 v-if="result">Result</h1>
+  <h1 v-if="result == 1">Result</h1>
+
+  <h2 v-if="day == 'sunday'">Sunday</h2>
+  <h2 v-else-if="day == 'monday'">Monday</h2>
+  <h2 v-else-if="day == 'tuesday'">Tuesday</h2>
+  <h2 v-else>Today Is a {{ day }}</h2>
 </template>
 
-<style scoped>
-input {
-  width: 300px;
-  padding: 1rem;
-}
-</style>
+<style scoped></style>
