@@ -1,5 +1,17 @@
-<script setup></script>
+<script setup>
+const message = "Welcome vue js project";
+function getData() {
+  return "Hello";
+}
+</script>
 
-<template></template>
+<template>
+  <h1>{{ message }}</h1>
+  <h1>{{ getData() }}</h1>
+</template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  color: red;
+}
+</style>
