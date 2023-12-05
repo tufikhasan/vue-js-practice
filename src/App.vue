@@ -1,14 +1,27 @@
-<script setup>
-const result = true;
-const day = "sunday";
-</script>
-<template>
-  <h1 v-show="result">Result</h1>
-  <h1 v-show="result == 1">Result</h1>
+<script setup></script>
 
-  <h2 v-show="day == 'sunday'">Sunday</h2>
-  <h2 v-show="day == 'monday'">Monday</h2>
-  <h2 v-show="day == 'tuesday'">Tuesday</h2>
+<template>
+  <h2>When working event always use v-show condition not v-if</h2>
+  <h2>v-if can use template tag but v-show not working template tag</h2>
+  <template v-if="true">
+    <h1>v-if: working template tag</h1>
+  </template>
+  <div v-if="true">
+    <h1>v-if: show all tag with parent tag</h1>
+  </div>
+
+  <br />
+
+  <template v-show="true">
+    <h1>v-show: not working template tag</h1>
+  </template>
+  <div v-show="true">
+    <h1>v-show: always show all tag with parent tag</h1>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+h2 {
+  color: red;
+}
+</style>
